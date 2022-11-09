@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+    --primary-orange: hsl(31, 77%, 52%);
+    --primary-cyan: hsl(184, 100%, 22%);
+    --primary-dark-cyan: hsl(179, 100%, 13%);
+
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --bg-color: hsl(0, 0%, 95%);
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+main {
+    display: flex;
+}
+
+main > .sedans {
+    background: var(--primary-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+main > .suvs {
+    background: var(--primary-cyan);
+}
+
+main > .luxury {
+    background: var(--primary-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+main section .card {
+    width: 300px;
+    max-height: max-content;
+    padding: 2.5rem;
+}
+
+main section .card > h1 {
+    color: var(--bg-color);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding-block: 2rem;
+}
+
+main section .card > p {
+    color: var(--paragraph-color);
+    font-size: 15px;
+    padding-bottom: 5rem;
+}
+
+main section .card > button {
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    border-radius: 1.4rem;
+    background: var(--bg-color);
+    font-weight: 400;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+main section .card > button:hover {
+    background: none;
+    border: 2px solid var(--bg-color);
+    color: var(--bg-color) !important;
+}
+
+@media screen and (max-width: 450px) {
+    main {
+        flex-direction: column;
+        margin-block: 3rem;
+    }
+
+    main > .sedans {
+        border-radius: 10px 10px 0 0;
+    }
+
+    main > .luxury {
+        border-radius: 0 0 10px 10px;
+    }
+}
